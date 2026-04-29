@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iskolai Digitális Szavazás</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Iskolai Digitális Szavazórendszer</h1>
+    <p>Válassz kategóriánként egy jelöltet, majd küldd be a szavazatot.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Szavazófülke</h2>
+      <label for="studentId">Diák azonosító</label>
+      <input id="studentId" placeholder="pl. 11A-kiss.janos" />
+      <div id="voteArea"></div>
+      <button id="voteBtn">Szavazat beküldése</button>
+      <p id="voteFeedback"></p>
+    </section>
+
+    <section class="card">
+      <h2>Választási iroda (admin)</h2>
+      <form id="newCategoryForm">
+        <input id="newCategoryName" placeholder="Új kategória neve" required />
+        <button type="submit">Kategória hozzáadása</button>
+      </form>
+      <div id="adminArea"></div>
+    </section>
+
+    <section class="card">
+      <h2>Eredményhirdetés</h2>
+      <button id="refreshResults">Eredmények frissítése</button>
+      <div id="resultsArea"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
